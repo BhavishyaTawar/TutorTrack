@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorTrack - UPSC Dashboard</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        header {
+            background-color: #3f51b5; /* Blue color for header */
+            color: #ffffff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffeb3b; /* Yellow color on hover */
+        }
+
+        .container {
+            display: flex;
+            padding: 2rem;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        aside {
+            width: 25%;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+
+        aside h3 {
+            color: #3f51b5;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            margin-bottom: 1rem;
+        }
+
+        aside ul li a {
+            color: #3f51b5;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        aside ul li a:hover {
+            color: #ff5722; /* Orange color on hover */
+        }
+
+        section {
+            width: 70%;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            background-color: #f0f4c3; /* Light yellow card background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: #fff176;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #3f51b5;
+        }
+
+        footer {
+            background-color: #3f51b5;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .profile-info, .performance-metrics {
+            width: 48%;
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .profile-info:hover, .performance-metrics:hover {
+            transform: translateY(-5px);
+            background-color: #fff176;
+        }
+
+        .badge-section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            width: 48%;
+            margin: 1%;
+            background-color: #ffffff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .badge:hover {
+            transform: translateY(-5px);
+            background-color: #fff176;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            aside,
+            section {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>TutorTrack - UPSC Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Leaderboard</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Practice Questions</a></li>
+                <li><a href="#">Mock Tests</a></li>
+                <li><a href="#">Current Affairs</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Previous Year Papers</a></li>
+                <li><a href="#">Discussion Forums</a></li>
+            </ul>
+        </aside>
+
+        <section>
+            <div class="profile-section">
+                <div class="profile-info">
+                    <h3>User Information</h3>
+                    <p><strong>Username:</strong> [User Name]</p>
+                    <p><strong>Rank:</strong> [Rank]</p>
+                    <button>Edit Profile</button>
+                </div>
+                <div class="performance-metrics">
+                    <h3>Performance Metrics</h3>
+                    <p><strong>Total Questions Solved:</strong> 1200</p>
+                    <p><strong>Accuracy:</strong> 85%</p>
+                    <p><strong>Mock Tests Taken:</strong> 50</p>
+                    <p><strong>Current Affairs Mastery:</strong> 70%</p>
+                </div>
+            </div>
+
+            <div class="badge-section">
+                <div class="badge">
+                    <h3>Subject Performance</h3>
+                    <p><strong>History:</strong> 75%</p>
+                    <p><strong>Geography:</strong> 65%</p>
+                    <p><strong>Polity:</strong> 80%</p>
+                    <p><strong>Economy:</strong> 72%</p>
+                    <p><strong>Science & Tech:</strong> 68%</p>
+                </div>
+                <div class="badge">
+                    <h3>Recent Activity</h3>
+                    <ul>
+                        <li>Attempted Mock Test 15 - 2 days ago</li>
+                        <li>Updated Current Affairs - 3 days ago</li>
+                        <li>Participated in Polity Discussion - 4 days ago</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card resources">
